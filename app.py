@@ -1,10 +1,10 @@
-from flask import Flask , render_template
+from flask import Flask , render_template , jsonify
 
 app = Flask(__name__,template_folder="temps")
 
 @app.route("/")
 def root():
-    return render_template("sample.html")
+    return jsonify({"hola":"mujer"})
 
 
 app.run(debug=True)
